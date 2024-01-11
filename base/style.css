@@ -254,8 +254,8 @@ header{
     position:absolute;
     top:50%; 
 
-    width:1500px;  
-    height:1000px; 
+    width:2500px;  
+    height:1300px; 
 
     padding:40px;  
 
@@ -268,28 +268,32 @@ header{
 }
 
 .modal-image{
-    width:50%;
+    width:45%;
     height:50%;
     position: absolute;
-    top: 50;
-    left: 50;
+    top: 60;
+    left: 60;
 }
 
 .modal-content{
     position: absolute;
-    top: 650;
-    left: 468;
+    top: 15%;
+    left: 65%;
     transform: translateX(-40%);
     max-height: 500px; /* Adjust the max height as needed */
-    
+    font-size: 200%;
+    color:gray;
   
-overflow: auto;
+    overflow: auto;
 }
 
 .modal-title{
     position: absolute;
-    top: 590;
-    left: 55;
+    top: 3%;
+    left: 59%;
+    font-weight: bold;
+    font-size: 300%;
+    
 }
 /* 모달창 블러 효과 */
 .blur-background {

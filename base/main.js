@@ -109,53 +109,50 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
         popularMoviesSection.style.display = 'block';
     }
 // 모달 창 만들기
-    function showMovieDetail(title, poster_path, overview) {
-        const modal = document.createElement('div');
-        modal.classList.add('modal');
-    
-        modal.style.display = 'flex';
-    
-        const modalBody = document.createElement('div');
-        modalBody.classList.add('modal_body');
+function showMovieDetail(title, poster_path, overview) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
 
-        const modalImg = document.createElement('img');
-        modalImg.src= `https://image.tmdb.org/t/p/w500/${poster_path}`;
-    
-        const modalTitle = document.createElement('h2');
-        modalTitle.textContent = title;
-    
-        const modalContent = document.createElement('p');
-        modalContent.textContent = overview;
+    modal.style.display = 'flex';
 
-        modalImg.classList.add('modal-image');
-        modalContent.classList.add('modal-content');
-        modalTitle.classList.add('modal-title');
+    const modalBody = document.createElement('div');
+    modalBody.classList.add('modal_body');
 
-    
+    const modalImg = document.createElement('img');
+    modalImg.src= `https://image.tmdb.org/t/p/w500/${poster_path}`;
 
-        modalBody.appendChild(modalTitle);
-        modalBody.appendChild(modalContent);
-        modalBody.appendChild(modalImg);
-        modal.appendChild(modalBody);
-        document.body.appendChild(modal);
+    const modalTitle = document.createElement('h2');
+    modalTitle.textContent = title;
+
+    const modalContent = document.createElement('p');
+    modalContent.textContent = overview;
+
+    modalImg.classList.add('modal-image');
+    modalContent.classList.add('modal-content');
+    modalTitle.classList.add('modal-title');
 
 
-            // 블러효과 추과
-    const elementsToBlur = document.querySelectorAll('body > *:not(.modal)');
-    elementsToBlur.forEach(element => {
-     element.classList.add('blur-background');
-    });
-    
-    modal.addEventListener("click", function () {
-        modal.style.display = "none";
-        // 모달창 끄면 블러 꺼짐
-        elementsToBlur.forEach(element => {
-            element.classList.remove('blur-background');
-        });
-    });
-}
-    
 
+    modalBody.appendChild(modalTitle);
+    modalBody.appendChild(modalContent);
+    modalBody.appendChild(modalImg);
+    modal.appendChild(modalBody);
+    document.body.appendChild(modal);
+
+          // 블러효과 추과
+          const elementsToBlur = document.querySelectorAll('body > *:not(.modal)');
+          elementsToBlur.forEach(element => {
+           element.classList.add('blur-background');
+          });
+      
+          modal.addEventListener("click", function () {
+              modal.style.display = "none";
+              // 모달창 끄면 블러 꺼짐
+              elementsToBlur.forEach(element => {
+                  element.classList.remove('blur-background');
+              });
+          });
+      }
     
     
    
