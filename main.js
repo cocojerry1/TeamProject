@@ -2,7 +2,6 @@ const options = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZTcyZDM3ZTI1NjAxZGZhODYwZDU1MjY5YzE0MmY3OSIsInN1YiI6IjY1OTdiNjBlNjBjNTFkNjdhZjk3ODdiZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yhDX4NZE7z-O-HAh025iEg7M0iwcbrwCTOZIUROyFI0'
     }
 };
 const searchInput = document.getElementById('search-input');
