@@ -254,8 +254,8 @@ header{
     position:absolute;
     top:50%; 
 
-    width:2500px;  
-    height:1300px; 
+    width:2200px;  
+    height:1000px; 
 
     padding:40px;  
 
@@ -300,3 +300,12 @@ header{
     filter: blur(5px);
     -webkit-filter: blur(5px);
   }
+/* 닫기버튼 */
+.bx.bxs-x-square {
+    color: red; 
+    position: absolute;
+    top: 5%;
+    left: 96%;
+    height: 50%;
+    width: 100%;
+}
