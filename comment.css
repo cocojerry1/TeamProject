@@ -1,0 +1,152 @@
+.body {
+    background-color: black;
+    width: 2400px;
+    height: 3000px;
+}
+
+.sec {
+    background-color: black;
+    width: 1400px;
+    height: 2000px;
+
+    margin-top: 700px;
+    margin-bottom: 1500px;
+    margin-right: 11px;
+    margin-left: 11x;
+}
+
+.h1 {
+    color: azure;
+    text-align: left;
+    margin: 50px;
+}
+
+.title_star {
+    color: azure;
+    margin-left: 50px;
+}
+
+.warning_msg {
+    color: azure;
+    margin-left: 50px;
+}
+
+
+#comment-author {
+    width: 100px;
+    background-color: rgb(206, 198, 198);
+    
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+#comment-password {
+    width: 100px;
+    background-color: rgb(206, 198, 198);
+    
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+#comment-body {
+    width: 600px;
+    height: 70px;
+    background-color: rgb(206, 198, 198);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.btn {
+    margin-left: 1px;
+    padding-bottom: 10px;
+    align-items: center;
+    border: 0;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+
+    background: #cc0d3d;
+    color: #fff;
+    padding: 7px 12px;
+}
+
+
+
+.rating {
+    position: relative;
+    width: 200px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+    padding: 5px;
+    overflow: hidden;
+    margin-left: 50px;
+
+
+}
+
+.rating__result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-10px) translateX(-5px);
+    z-index: -9;
+    font: 3em Arial, Helvetica, sans-serif;
+    color: #ebebeb8e;
+    pointer-events: none;
+}
+
+.rating__star {
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #dabd18b2;
+    transition: filter linear .3s;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.rating__star:hover {
+    filter: drop-shadow(1px 1px 4px gold);
+}
+
+.comment strong {
+   color: white;
+}
+
+#comment-section {
+    color: white;
+    margin-left: 50px;
+}
+
+.comment-rating {
+    display: inline-block;
+    margin-left: 10px;
+    color: rgb(170, 170, 35);
+}
+
+.rating__star {
+    cursor: pointer;
+}
+
+.filled {
+    color: yellow; /* 채워진 별의 색상을 원하는 색으로 변경하세요. */
+}
+
+.deletebtn {
+    margin-left: 461px;
+    padding-bottom: 10px;
+    align-items: center;
+    border: 0;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+
+    background: #cc0d3d;
+    color: #fff;
+    padding: 7px 12px;
+}
+ 
