@@ -2,8 +2,7 @@ const options = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZTcyZDM3ZTI1NjAxZGZhODYwZDU1MjY5YzE0MmY3OSIsInN1YiI6IjY1OTdiNjBlNjBjNTFkNjdhZjk3ODdiZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yhDX4NZE7z-O-HAh025iEg7M0iwcbrwCTOZIUROyFI0'
-    }
+        }
 };
 const searchInput = document.getElementById('search-input');
 
@@ -104,67 +103,71 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
         homeSection.style.display = 'block';
 
         // 다른 섹션 숨기기 등 추가 설정 가능
-        //  다른 섹션들은 숨기기
+        // 예: 다른 섹션들은 숨기기
         var popularMoviesSection = document.querySelector('.popular');
         popularMoviesSection.style.display = 'block';
     }
-    // 모달창 만들기
-    function showMovieDetail(title, poster_path, overview) {
-        const modal = document.createElement('div');
-        modal.classList.add('modal');
-        modal.style.display = 'flex';
-    
-        const modalBody = document.createElement('div');
-        modalBody.classList.add('modal_body');
-    
-        const modalImg = document.createElement('img');
-        modalImg.src = `https://image.tmdb.org/t/p/w500/${poster_path}`;
-        modalImg.classList.add('modal-image');
-    
-        const modalTitle = document.createElement('h2');
-        modalTitle.textContent = title;
-        modalTitle.classList.add('modal-title');
-    
-        const modalContent = document.createElement('p');
-        modalContent.textContent = overview;
-        modalContent.classList.add('modal-content');
-    
-        // 닫기 버튼 생성
-    const closeButton = document.createElement('i');
-    closeButton.classList.add('bx', 'bxs-x-square'); 
-    closeButton.style.cursor = 'pointer'; 
-        // 닫기 버튼 클릭 이벤트
-        closeButton.addEventListener('click', function() {
-            modal.remove();
-    
-            // 블러 효과 제거
-            const elementsToBlur = document.querySelectorAll('body > *:not(.modal)');
-            elementsToBlur.forEach(element => {
-                element.classList.remove('blur-background');
-            });
-        });
-    
-        // 요소들을 모달 바디에 추가
-        modalBody.appendChild(modalTitle);
-        modalBody.appendChild(modalContent);
-        modalBody.appendChild(modalImg);
-        modalBody.appendChild(closeButton); // 닫기 버튼 추가
-        modal.appendChild(modalBody);
-        document.body.appendChild(modal);
-    
-        // 블러 효과 적용
+ // 모달 창 만들기
+ function showMovieDetail(title, poster_path, overview) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.style.display = 'flex';
+
+    const modalBody = document.createElement('div');
+    modalBody.classList.add('modal_body');
+
+    const modalImg = document.createElement('img');
+    modalImg.src = `https://image.tmdb.org/t/p/w500/${poster_path}`;
+    modalImg.classList.add('modal-image');
+
+    const modalTitle = document.createElement('h2');
+    modalTitle.textContent = title;
+    modalTitle.classList.add('modal-title');
+
+    const modalContent = document.createElement('p');
+    modalContent.textContent = overview;
+    modalContent.classList.add('modal-content');
+
+    // 닫기 버튼 생성
+const closeButton = document.createElement('i');
+closeButton.classList.add('bx', 'bxs-x-square'); 
+closeButton.style.cursor = 'pointer'; 
+    // 닫기 버튼 클릭 이벤트
+    closeButton.addEventListener('click', function() {
+        modal.remove();
+
+        // 블러 효과 제거
         const elementsToBlur = document.querySelectorAll('body > *:not(.modal)');
         elementsToBlur.forEach(element => {
-            element.classList.add('blur-background');
+            element.classList.remove('blur-background');
         });
+    });
+
+    // 요소들을 모달 바디에 추가
+    modalBody.appendChild(modalTitle);
+    modalBody.appendChild(modalContent);
+    modalBody.appendChild(modalImg);
+    modalBody.appendChild(closeButton); // 닫기 버튼 추가
+    modal.appendChild(modalBody);
+    document.body.appendChild(modal);
+
+    // 블러 효과 적용
+    const elementsToBlur = document.querySelectorAll('body > *:not(.modal)');
+    elementsToBlur.forEach(element => {
+        element.classList.add('blur-background');
+    });
+
+    // 모달 외부 클릭 시 모달 닫기
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            closeButton.click();
+        }
+    });
+}
+
     
-        // 모달 외부 클릭 시 모달 닫기
-        modal.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                closeButton.click();
-            }
-        });
-    }
+    
+   
 
 function showSaveButton(container) {
     const saveButton = container.querySelector('.save-btn');
