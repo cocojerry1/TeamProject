@@ -5,14 +5,21 @@
 }
 
 .sec {
-    background-color: black;
-    width: 1400px;
-    height: 2000px;
-
-    margin-top: 700px;
-    margin-bottom: 1500px;
+    background-color: #13100d;
+    width: 900px;
+    height: 420px;
+    margin-top: 540px;
+    margin-bottom: 1000px;
     margin-right: 11px;
     margin-left: 11x;
+
+    
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+.sec::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
 .h1 {
@@ -34,43 +41,60 @@
 
 #comment-author {
     width: 100px;
-    background-color: rgb(206, 198, 198);
-    
+    background-color: rgb(31, 28, 28);
     border-radius: 5px;
     margin-top: 5px;
     margin-left: 50px;
+    color: azure;
 }
 #comment-password {
     width: 100px;
-    background-color: rgb(206, 198, 198);
+    background-color: rgb(31, 28, 28);
     
     border-radius: 5px;
     margin-top: 5px;
     margin-left: 50px;
+    color: azure;
 }
 
 #comment-body {
     width: 600px;
     height: 70px;
-    background-color: rgb(206, 198, 198);
+    background-color: rgb(31, 28, 28);
     border-radius: 5px;
     margin-top: 10px;
     margin-left: 50px;
+    color: azure;
 }
 
 .btn {
-    margin-left: 1px;
+    margin-right: 10px;
     padding-bottom: 10px;
     align-items: center;
     border: 0;
     border-radius: 4px;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: bolder;
 
-    background: #cc0d3d;
-    color: #fff;
+    background: rgba(255, 0, 0, 0.747);
+    color:black;
     padding: 7px 12px;
 }
+
+.deletebtn {
+    margin-left: 456px;
+    padding-bottom: 10px;
+    align-items: center;
+    border: 0;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bolder;
+
+    background: rgba(255, 0, 0, 0.747);
+    color:black;
+    padding: 7px 12px;
+}
+ 
 
 
 
@@ -84,7 +108,7 @@
     gap: .3em;
     padding: 5px;
     overflow: hidden;
-    margin-left: 50px;
+    margin-left: 1px;
 
 
 }
@@ -115,6 +139,7 @@
 
 .comment strong {
    color: white;
+   
 }
 
 #comment-section {
@@ -123,9 +148,11 @@
 }
 
 .comment-rating {
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: inline-block;
     margin-left: 10px;
-    color: rgb(170, 170, 35);
+    color: rgb(236, 236, 48);
 }
 
 .rating__star {
@@ -135,18 +162,3 @@
 .filled {
     color: yellow; /* 채워진 별의 색상을 원하는 색으로 변경하세요. */
 }
-
-.deletebtn {
-    margin-left: 461px;
-    padding-bottom: 10px;
-    align-items: center;
-    border: 0;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 500;
-
-    background: #cc0d3d;
-    color: #fff;
-    padding: 7px 12px;
-}
- 

@@ -7,6 +7,8 @@ function clearAllComments() {
     alert('리뷰가 모두 삭제되었습니다.');
 }
 
+
+
 function loadComments() {
     const comments = JSON.parse(localStorage.getItem('comments')) || [];
     const commentsSection = document.getElementById('comment-section');
@@ -59,3 +61,5 @@ document.addEventListener('DOMContentLoaded', function () {
         commentsSection.appendChild(commentElement);
     });
 });
+
+
