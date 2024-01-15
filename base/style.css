@@ -306,6 +306,5 @@ header{
     position: absolute;
     top: 5%;
     left: 96%;
-    height: 50%;
-    width: 100%;
+    font-size: 30px;
 }
