@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>댓글 시스템 예제</title>
+    <link rel="stylesheet" type="text/css" href="comment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    
+</head>
+
+
+
+<body class="body">
+    
+    <section class="sec">
+        <h1 class="h1">내플릭스 사용자 평<div class="custom-soxxb1 e1og0sue3"></div>
+        </h1>
+        <form name="reviewform" class="reviewform" method="post" action="/save">
+            <input type="hidden" name="rate" id="rate" value="0" />
+            <p class="title_star">별점과 리뷰를 남겨주세요.</p>
+            <div class="review_rating">
+                <div class="warning_msg">별점을 선택해 주세요.
+                <div class="rating">
+                    <i class="rating__star far fa-star" onclick="setRating(1)"></i>
+                    <i class="rating__star far fa-star" onclick="setRating(2)"></i>
+                    <i class="rating__star far fa-star" onclick="setRating(3)"></i>
+                    <i class="rating__star far fa-star" onclick="setRating(4)"></i>
+                    <i class="rating__star far fa-star" onclick="setRating(5)"></i>
+                </div>
+                </div>
+                <div class="rating__result">0</div>
+            </div>
+        </form>
+        <form id="comment-form">
+
+            <input type="text" id="comment-author" placeholder="이름" value="">
+            <input type="text" id="comment-password" placeholder="비밀번호">
+
+            <div>
+                <textarea id="comment-body" placeholder="리뷰 작성하기..."></textarea>
+            </div>
+
+            <button class="deletebtn" onclick="clearAllComments()">리뷰 모두 삭제</button>
+            <button type="button" class="btn" onclick="submitComment()">리뷰 작성</button>
+
+
+        </form>
+        <div id="comment-section">
+            
+        </div>
+       
+    </section>
+    <script src="comment.js"></script>
+    
+</body>
+        

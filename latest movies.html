@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <mata http-equiv="X-UA-Compatible" content = "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Movies Website</title>
+    <!-- Link TO CSS-->
+    <link rel = "stylesheet" href = "style.css">  
+    <!-- Fov Icon-->
+    <link rel = "shortcut icon" href = "img/fav-icon.png" type ="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Cards</title>
+<body>
+    <div class = "main_container">
+            <header>
+                <div class = "nav container">
+                    <a href = "index.html" class = "logo">
+                        NEA<span>FLEX</span>
+                    </a>
+                    <!-- 검색 창 만들기 -->
+                    <div class = "search-box">
+                        <input type="search" name ="" id="search-input" placeholder="Search movie" onkeydown="searchKeyPress(event)">
+                        <i class='bx bx-search' onclick="searchMovies()"></i>
+                        <!--placeholder은 그냥 이거에 대한 설명임 개발자가 알아볼수 있께-->
+        
+                    </div>
+                    <!-- User -->
+                    <a href="#" class="user">
+                        <img src="https://th.bing.com/th/id/OIP._0nj-VCGpTVBUPZYf0UHYAHaHa?w=206&h=206&c=7&r=0&o=5&pid=1.7" alt="" class="user-img">
+                    </a>
+                    <div class = "navbar">
+                        <a href="index.html" class="nav-link nav-active ">
+                            <i class='bx bx-home'></i>
+                            <span class="nav-link-title">Home</span>
+                        </a>
+                        <a href="populars.html" class="nav-link">
+                            <i class='bx bxs-hot' ></i>
+                            <span class="nav-link-title">Populars</span>
+                        </a>
+                        <a href="latest movies.html" class="nav-link">
+                            <i class='bx bx-tv' ></i>
+                            <span class="nav-link-title">latest movies</span>
+                        </a>
+                        
+                        <a href="favourite.html" class="nav-link">
+                            <i class='bx bx-heart' ></i>
+                            <span class="nav-link-title">Favourite</span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        <section class="latest container" id="latest">
+            <div class = "heading">
+                <h2 class = "heading-title"><p>latest movies</p></h2>
+            </div>
+            <div id="movie-container"></div>
+        </section>
+    </div>
+    <script src = "latest movies.js"></script>
+    <script src = "comment.js"></script>
+</body>
+
+</html>

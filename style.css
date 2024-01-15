@@ -71,14 +71,14 @@ header{
 /*---------------------------------------------------*/
 /*---------------------------------------------------*/
 .logo{
-  font-size: 1.4rem;
-  color: var(--text-color);
+  font-size: 4rem;
+  color: red;
   font-weight: 600;
   text-transform: uppercase;
   margin: 0 auto 0 0;
 }
 .logo span{
-    color: var(--main-color);
+    color: red;
 }
 .search-box{
     max-width: 240px;
@@ -306,5 +306,38 @@ header{
     position: absolute;
     top: 5%;
     left: 96%;
-    font-size: 30px;
+    font-size: 150%;
+}
+
+.mySlides {display: none;}
+.fade {
+  animation:fade 5s infinite;
+}
+
+.slide-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide-content img {
+    width: 50%;  /* 각 이미지의 너비를 45%로 설정하여 한 줄에 두 개의 이미지가 들어갈 수 있게 합니다. */
+    height: 600px;
+    object-fit: cover;
+      /* 이미지의 높이를 자동으로 설정하여 원본 이미지의 비율을 유지합니다. */
+}
+
+
+@keyframes fade {
+  0%,100% { opacity: 0; }
+  20%,80% { opacity: 1; }
+}
+
+.comment-title {
+    color: #ff0000; /* 원하는 색상 코드로 변경하세요. */
+}
+#commentInput {
+    background-color: #888; /* 배경색을 회색으로 설정 */
+    color: #fff; /* 글씨색을 흰색으로 설정 */
+    border: none; /* 테두리를 없애기 */
+    padding: 10px; /* 내부 여백 설정 */
 }
