@@ -9,28 +9,48 @@ function clearAllComments() {
 
 
 
+
+
 function loadComments() {
     const comments = JSON.parse(localStorage.getItem('comments')) || [];
     const commentsSection = document.getElementById('comment-section');
     commentsSection.innerHTML = '';
-    comments.forEach(comment => {
+    comments.forEach((comment, index) => {
         const commentElement = document.createElement('div');
         commentElement.classList.add('comment');
-        commentElement.innerHTML = `<strong>${comment.author}</strong>: ${comment.body} <span class="comment-rating">평점: ${comment.rating}</span>`;
+        commentElement.innerHTML = `
+            <strong>${comment.author}</strong>: ${comment.body} 
+            <span class="comment-rating">평점: ${comment.rating}</span>
+            <button onclick="deleteComment(${index})">삭제하기</button>`; 
         commentsSection.appendChild(commentElement);
     });
 }
 
+
 function submitComment() {
     const author = document.getElementById('comment-author').value;
+    const password = document.getElementById('comment-password').value; // Get the password
     const body = document.getElementById('comment-body').value;
     const rating = document.getElementById('rate').value;
-    const comment = { author, body, rating };
+    const comment = { author, body, rating, password }; // Include the password here
     const comments = JSON.parse(localStorage.getItem('comments')) || [];
     comments.push(comment);
     localStorage.setItem('comments', JSON.stringify(comments));
     loadComments();
     document.getElementById('comment-form').reset();
+}
+
+function deleteComment(index) {
+    const comments = JSON.parse(localStorage.getItem('comments')) || [];
+    const passwordToVerify = prompt("비밀번호를입력하세요!!:");
+
+    if (comments[index] && comments[index].password === passwordToVerify) {
+        comments.splice(index, 1); // Remove the comment at the given index
+        localStorage.setItem('comments', JSON.stringify(comments)); // Update local storage
+        loadComments(); // Refresh comments display
+    } else {
+        alert("잘못된 비밀번호입니다!!.");
+    }
 }
 
 function setRating(value) {

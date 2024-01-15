@@ -7,23 +7,33 @@ const options = {
 };
 const searchInput = document.getElementById('search-input');
 
-// 검색어 입력 시 이벤트 처리
 searchInput.addEventListener('input', function () {
     // 입력된 검색어
     const searchTerm = searchInput.value.toLowerCase();
-
     // 각 영화 카드에 대한 루프
     const movieCards = document.querySelectorAll('.movie-card');
+
+    let matchFound = false;
     movieCards.forEach(card => {
         const title = card.querySelector('h3').textContent.toLowerCase();
         // 검색어와 영화 제목 또는 설명이 일치하는 경우 보여줌
         if (title.includes(searchTerm)) {
             card.style.display = 'grid';
+            matchFound = true;
         } else {
             card.style.display = 'none';
         }
     });
+    // 일치하는 영화가 없는 경우 알림
+    if (!matchFound && searchTerm) {
+        alert("일치하는 영화가 없습니다");
+    }
 });
+    // 일치하지 않는경우
+    if (!matchFound && searchTerm) {
+        alert("일치하는 영화가 없습니다");
+    }
+
 document.addEventListener('DOMContentLoaded', function () {
     const movieContainer = document.getElementById('movie-container');
 
