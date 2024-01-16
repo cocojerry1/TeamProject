@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neaflix</title>
+    <link rel="stylesheet" type="text/css" href="../s_styles.css">
+</head>
+
+<div class="form-wrapper">
+    <h2>회원가입</h2>
+    <form action="/signupProc" method="post">
+        <div class="form-control">
+            <input type="text" id="name" name="name" required />
+            <label>이름</label>
+        </div>
+        <div class="form-control">
+            <input type="text" id="user_id" name="user_id" required />
+            <label>이메일 주소</label>
+        </div>
+        <div class="form-control">
+            <input type="password" id="pw" name="pw" required />
+            <label>비밀번호</label>
+        </div>
+        <div class="form-control" style="display: flex; justify-content: space-between;">
+            <div class="half-width-input">
+                <input type="text" id="age" name="age" required />
+                <label class="half-width-label">나이</label>
+            </div>
+            <div class="half-width-input">
+                <input type="text" id="gender" name="gender" required />
+                <label class="half-width-label">성별</label>
+            </div>
+        </div>
+        <div class="form-control">
+            <input type="text" id="Genre" name="Genre" required />
+            <label>선호하는 장르</label>
+        </div>
+       
+        <button>시작하기</button>    
+        <p>Neaflix 회원이 아닌가요? 지금 시작하세요.</a></p>
+    </form>
+</body>
+
+</html>

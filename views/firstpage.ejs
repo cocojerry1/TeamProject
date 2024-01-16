@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel ="stylesheet" href = "https://fonts.googleapis.com/css?family=Cinzel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Playfair+Display:700">
+    <link rel="stylesheet" type="text/css" href="first_style.css">
+</head>
+<body>
+    <div id="title">NEAFLIX</div>
+    <div id="description_of_title">NEAFLIX는 내일배움캠프 영화 매니아들의 성지입니다.</div>
+    <div id="buttons">
+        <button class = "btn_firstpage" id = "login">로그인 페이지로 이동하기</button>
+    </div>
+   <script>
+    
+// 로그인 페이지로 이동하기 누르면 로그인 페이지로 넘어가게 하는 코드
+document.getElementById('login').addEventListener('click', function() {
+    window.location.href = "/login";
+});
+
+
+
+// 복주머니 생성 코드
+setInterval(function createStar() {
+    var starCount = Math.floor(Math.random() * 5); // 0~4개의 별을 랜덤하게 생성
+    for(var i = 0; i < starCount; i++) {
+        setTimeout(function() {
+            var star = document.createElement("div");
+            star.className = "star";
+            star.style.left = Math.random() * window.innerWidth + "px";
+            document.body.appendChild(star);
+            setTimeout(function() {
+                star.remove();
+            }, 3000);
+        }, i * 600); // 별 생성 시간을 600ms씩 늦춤
+    }
+}, 3000);
+   </script>
+</body>
+</html>
