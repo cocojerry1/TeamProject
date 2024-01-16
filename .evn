@@ -1,0 +1,2 @@
+DATABASE_URL='mysql://iqbbs2x8rd1g33jtmvqj:pscale_pw_VzdGs25KFkSL2i5rLcY7GFsd4X4wPW6lOFlLaKlB5MI@aws.connect.psdb.cloud/ksmsparta?ssl={"rejectUnauthorized":true}'
+  
